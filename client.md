@@ -1,10 +1,10 @@
 # 安装客户端
-
+[TOC]
 ## 安装包
 
 在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请试用后，会看到如下信息
 
-![image.png](1562922677430-16fcc83f-5565-484b-a753-42d657d3056a.png)
+![image.png](images/1562922677430-16fcc83f-5565-484b-a753-42d657d3056a.png)
 
 点击下载客户端包，上传到测试机器后进行解压缩，得到如下目录
 
