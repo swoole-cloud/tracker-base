@@ -108,7 +108,7 @@ systemctl restart node-agent
 
 扩展需要放在pdo扩展后面加载。
 
-## 11. 加载扩展后报错`undefined symbol: compiler\_globals in Unknown`
+## 11. 加载扩展后报错`undefined symbol: compiler_globals in Unknown`
 
 扩展支持`nts`非线程安全版本PHP，可使用命令`php -v`查看
 ![](images/screenshot_1565662073057.png)
