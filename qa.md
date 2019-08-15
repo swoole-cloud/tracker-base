@@ -4,7 +4,7 @@
 
 一切问题先检查客户端、`swoole_plus`扩展、服务端版本是否一致，是否为最新发布版本
 
->[success] swoole\_plus扩展的发布版本可能会出现比客户端、服务端高，这个不影响。
+>[success] swoole_plus扩展的发布版本可能会出现比客户端、服务端高，这个不影响。
 
 * 查看客户端版本 `ps -ef | grep node`
 
