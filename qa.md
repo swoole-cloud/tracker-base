@@ -4,7 +4,7 @@
 
 一切问题先检查客户端、`swoole_plus`扩展、服务端版本是否一致，是否为最新发布版本
 
->[success] swoole_plus扩展的发布版本可能会出现比客户端、服务端高，这个不影响。
+>[success] swoole\_plus扩展的发布版本可能会出现比客户端、服务端高，这个不影响。
 
 * 查看客户端版本 `ps -ef | grep node`
 
@@ -19,7 +19,7 @@ apm.enable=1
 apm.sampling_rate=100
 ```
 
->[info] cli模式 php --ri swoole_plus
+>[info] cli模式 php --ri swoole\_plus
 
 ![](images/screenshot_1565061764588.png)
 
@@ -106,7 +106,8 @@ systemctl restart node-agent
 
 ## 10. 加载扩展后报错`undefined symbol: php_pdo_get_exception`
 
-扩展需要放在pdo扩展后面加载。
+扩展需要放在pdo扩展后面加载。使用`php --ini | grep "Scan for additional .ini files in:"`查看第三方加载目录，在此目录中创建一个`swoole_plus`的配置
+![](images/screenshot_1565858281415.png)
 
 ## 11. 加载扩展后报错`undefined symbol: compiler_globals in Unknown`
 
