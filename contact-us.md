@@ -6,7 +6,7 @@ https://www.swoole-cloud.com/
 
 ## 客服微信
 
-一般的使用问题，你可以在我们完整的[用户手册](https://www.kancloud.cn/swoole-inc/ee-help-wiki/1213716)中找到答案。
+一般的使用问题，你可以在我们完整的[用户手册](https://www.kancloud.cn/swoole-inc/ee-help-wiki/1213080)中找到答案。
 
 如果遇到疑难问题和使用故障，您可以可联系客服微信咨询。
 
