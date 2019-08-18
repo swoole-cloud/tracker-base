@@ -2,7 +2,7 @@
 [TOC]
 ## 安装包
 
-在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请试用后，会看到如下信息
+在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请使用后，会看到如下信息
 
 ![image.png](images/1562922677430-16fcc83f-5565-484b-a753-42d657d3056a.png)
 
