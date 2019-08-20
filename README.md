@@ -1,6 +1,6 @@
 ![](images/swoolee.png)
 
-[Swoole Enterprise](https://www.swoole-cloud.com)作为`Swoole`官方出品的一整套企业级`PHP`和`Swoole`分析调试工具，更专一、更专业。
+[Swoole Tracker](https://www.swoole-cloud.com)作为`Swoole`官方出品的一整套企业级`PHP`和`Swoole`分析调试工具，更专一、更专业。
 
 * 时刻掌握应用架构模型
 
@@ -17,6 +17,10 @@
 * 拥有强大的调试工具链
 
 >[info] 本系统支持远程调试，可在系统后台远程开启检测内存泄漏、阻塞检测和代码性能分析
+
+* 同时支持FPM和Swoole
+
+>[info] 完美支持PHP-FPM环境，不仅限于在Swoole中使用
 
 * 完善的系统监控
 
