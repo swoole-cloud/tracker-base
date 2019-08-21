@@ -11,3 +11,8 @@ https://www.swoole-cloud.com/
 如果遇到疑难问题和使用故障，您可以联系客服微信咨询。
 
 ![img](images/6b0425fb0d89789b3eea4452c5b240c5_430x430.png)
+
+## 交流群
+
+如果添加不上交流群，可以添加客服微信并说明加入SwooleTracker交流群
+![](images/swoole-tracker-weixin.png =400x)
