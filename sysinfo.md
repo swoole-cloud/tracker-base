@@ -1,6 +1,6 @@
 # 机器信息
 
-实时统计客户端机器的`CPU`、`内存`、`磁盘`、`网络`、`Socket`使用状况
+实时统计客户端机器的`CPU`、`内存`、`磁盘`、`网络`使用状况
 
 ### CPU
 
@@ -17,7 +17,3 @@
 ### 网络
 
 ![image.png](images/watermark,type_d3F5LW1pY3JvaGVp,size_20,text_6K-G5rKD56eR5oqA54mI5p2D5omA5pyJ,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10-20190806145819845.png)
-
-### Socket
-
-![image.png](images/watermark,type_d3F5LW1pY3JvaGVp,size_20,text_6K-G5rKD56eR5oqA54mI5p2D5omA5pyJ,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10-20190806145812383.png)
