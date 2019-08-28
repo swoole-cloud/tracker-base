@@ -12,7 +12,7 @@
 .
 ├── README_CLIENT.md README文件
 ├── app_deps 客户端代码
-│   ├── tracker-agent
+│   ├── node-agent
 │   └── public
 ├── musl-compat
 ├── deploy_env.sh 部署脚本
