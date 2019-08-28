@@ -2,24 +2,24 @@
 
 [TOC]
 
-一切问题先检查客户端、`swoole_plus`扩展、服务端版本是否一致，是否为最新发布版本
+一切问题先检查客户端、`swoole_tracker`扩展、服务端版本是否一致，是否为最新发布版本
 
->[success] swoole_plus扩展的发布版本可能会出现比客户端、服务端高，这个不影响。
+>[success] swoole_tracker扩展的发布版本可能会出现比客户端、服务端高，这个不影响。
 
 * 查看客户端版本 `ps -ef | grep node`
 
 ![](images/screenshot_1565061680091.png)
 
-* 查看 `swoole_plus` 扩展版本
+* 查看 `swoole_tracker` 扩展版本
 
 ```ini
 # php.ini不要忘了添加
-extension=swoole_plus.so
+extension=swoole_tracker.so
 apm.enable=1
 apm.sampling_rate=100
 ```
 
->[info] cli模式 php --ri swoole\_plus
+>[info] cli模式 php --ri swoole_tracker
 
 ![](images/screenshot_1565061764588.png)
 
@@ -35,14 +35,14 @@ apm.sampling_rate=100
 
 * 查看项目是否正确，自动创建的应用会放到默认项目中
 * 检查该应用是否存在合并应用或应用黑名单中
-* 检查客户端`swoole_plus` 配置是否正确，参考安装客户端->安装扩展
+* 检查客户端`swoole_tracker` 配置是否正确，参考安装客户端->安装扩展
 * 检查客户端是否给该服务端上报
 
 ## 2. 应用监控/应用追踪无信息
 
 * 检查对应后台IP是否正确，防火墙、端口是否开放
 * 检查客户端进程是否存在
-* 检查客户端`swoole_plus`配置是否正确，参考安装客户端->安装扩展
+* 检查客户端`swoole_tracker`配置是否正确，参考安装客户端->安装扩展
 * 存在脏数据缓存，等待5-10分钟（之前逻辑为客户端上报的时候会创建文件缓存，每五分钟删除一次，重新安装服务端后客户端文件缓存未删除，出现脏数据缓存，导致短时间内无法上报，现已将缓存写入内存中，重装服务端后重启服务端fpm和重启swoole-admin服务就能正常接收数据，无需等待）
 
 ## 3. Service应用无应用监控、追踪信息
