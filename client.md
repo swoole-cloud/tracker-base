@@ -69,7 +69,7 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 
 在docker环境部署需要修改Dockerfile或者docker-compose.yml或者在`docekr run`命令中添加参数，以下以采用官方docker-compose v3.7配置文件格式，php:fpm-7.x(-alpine)镜像为例，描述如何在docker部署
 
-### 修改Dockerfile以部署node-agent
+### 修改Dockerfile以部署tracker-agent
 
 在Dockerfile中执行deploy_env.sh来部署tracker-agent，然后在entrypoint中添加tracker-agent，例如
 
@@ -200,14 +200,14 @@ services:
 
 与修改配置类似，但不需要创建json，将 `seccomp=/path/to/that/modified/profile.json`换成`seccomp=unconfined`即可
 
-### 单独的NodeAgent容器（高级用法）
+### 单独的TrackerAgent容器（高级用法）
 
 此处提供一种单独运行的方法，仅供参考：
 
 ```bash
-# 在host安装nodeagent（或者手动安装/opt/swoole的文件）
+# 在host安装trackeragent（或者手动安装/opt/swoole的文件）
 cd /some/place/swoole-tracker/tracker-agent
-./deploy_env.sh a.b.c.d.
+./deploy_env.sh a.b.c.d
 # 开启NodeAgent容器
 docker run \
  --name trackeragent \
