@@ -19,4 +19,4 @@ fpm下会自动创建应用，名称为域名或对应ip，可以登录服务端
 系统支持自动生成应用名称并创建应用，无需修改任何代码，生成的应用名称格式为：
 Swoole的HttpServer：`ip:prot`
 其他的Server：`ip(hostname):prot`
- 
+查看对应的应用信息即可。
