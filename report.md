@@ -16,7 +16,10 @@ fpm下会自动创建应用，名称为域名或对应ip，可以登录服务端
 ## 常驻进程Service模式
 
 ### 自动创建
-系统支持自动生成应用名称并创建应用，无需修改任何代码，生成的应用名称格式为：
-Swoole的HttpServer：`ip:prot`
-其他的Server：`ip(hostname):prot`
+系统支持自动生成应用名称并创建应用，无需修改任何代码。
+
+如果使用 `Swoole` 的 `HttpServer` 那么生成的应用名称为`ip:port`
+
+如果使用 `Swoole` 其他的 `Server` 那么生成的应用名称为`ip(hostname):port`
+
 查看对应的应用信息即可。
