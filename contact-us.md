@@ -12,7 +12,8 @@ https://www.swoole-cloud.com/
 
 ![img](images/6b0425fb0d89789b3eea4452c5b240c5_430x430.png)
 
-## 交流群
+## Swoole Tracker交流群
 
-如果添加不上交流群，可以添加客服微信并说明加入SwooleTracker交流群
-![](images/swoole-tracker-weixin.png =400x)
+由于微信二维码只有 7 天有效期，这里需要大家先添加客服微信，然后由客服邀请进群。
+
+添加客服微信时，请说明加入 SwooleTracker 交流群。
