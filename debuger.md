@@ -2,16 +2,12 @@
 [TOC]
 ## 进程列表
 
-统计客户端fpm和cli的pid，可进行远程调试、pid进程CPU和内存占用统计
-
-![image.png](images/watermark,type_d3F5LW1pY3JvaGVp,size_20,text_6K-G5rKD56eR5oqA54mI5p2D5omA5pyJ,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10-20190806145637783.png)
+统计客户端fpm和cli的pid，可进行远程调试以及进程CPU和内存占用统计
+![](images/screenshot_1569479599885.png)
 
 ## 远程调试
 
 对于以下三种工具，可以直接在服务端点击按钮远程开启后进行调试，无需修改代码，重启服务。开启后发生请求，日志自动上传服务端后台进行分析展示
-
-![image.png](images/watermark,type_d3F5LW1pY3JvaGVp,size_20,text_6K-G5rKD56eR5oqA54mI5p2D5omA5pyJ,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10-20190806145636202.png)
-
 
 >[danger] 对性能有所影响，开启调试完毕后请及时关闭。
 
