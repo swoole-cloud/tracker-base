@@ -228,3 +228,7 @@ docker run \
  -v /opt/swoole:/opt/swoole:rw \
  -v php:7.3-fpm
 ```
+
+## 管理NodeAgent进程
+
+查看常见问题中的「 [管理NodeAgent守护进程](qa.md#4_NodeAgent_56) 」
