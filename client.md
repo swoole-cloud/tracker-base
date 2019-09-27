@@ -4,19 +4,19 @@
 
 在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请使用后，会看到如下信息
 
-![](images/1562922677430-16fcc83f-5565-484b-a753-42d657d3056a.png)
-
+![](images/screenshot_1569568131325.png)
 点击下载客户端包，上传到测试机器后进行解压缩，得到如下目录
 
 ```
 .
 ├── README_CLIENT.md README文件
-├── app_deps 客户端代码
+├── app_deps # 客户端代码
 │   ├── node-agent
 │   └── public
 ├── musl-compat
-├── deploy_env.sh 部署脚本
-├── swoole_tracker70.so 各版本扩展
+├── deploy_env.sh # 部署脚本
+├── inst.sh # 安装扩展助手
+├── swoole_tracker70.so # 各版本扩展
 ├── swoole_tracker71.so
 ├── swoole_tracker72.so
 └── swoole_tracker73.so
@@ -36,13 +36,14 @@
 
 根据你的机器PHP版本安装对应的扩展，复制对应的扩展到PHP环境扩展安装目录
 
->[info] 获取扩展安装目录：php -ini | grep extension 或者php -r "echo @ini\_get("extension\_dir").PHP\_EOL;"
+>[info] 获取扩展安装目录：php -ini | grep extension 或者php -r "echo @ini_get("extension_dir").PHP_EOL;"
 
 ```
 cp swoole_tracker70.so /your_php_extensions_path/swoole_tracker.so
 ```
+>[warning] 如果不会安装扩展，可使用我们的`安装扩展助手`进行安装
 
-可在 `php.ini` 中加入以下配置
+在 `php.ini` 中加入以下配置
 
 ```
 extension=swoole_tracker.so
