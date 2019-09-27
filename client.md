@@ -1,10 +1,10 @@
-# 安装客户端
 [TOC]
+
 ## 安装包
 
 在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请使用后，会看到如下信息
 
-![image.png](images/1562922677430-16fcc83f-5565-484b-a753-42d657d3056a.png)
+![](images/1562922677430-16fcc83f-5565-484b-a753-42d657d3056a.png)
 
 点击下载客户端包，上传到测试机器后进行解压缩，得到如下目录
 
@@ -36,10 +36,10 @@
 
 根据你的机器PHP版本安装对应的扩展，复制对应的扩展到PHP环境扩展安装目录
 
->[info] 获取扩展安装目录：php -ini | grep extension 或者php -r "echo @ini_get("extension_dir").PHP_EOL;"
+>[info] 获取扩展安装目录：php -ini | grep extension 或者php -r "echo @ini\_get("extension\_dir").PHP\_EOL;"
 
 ```
-cp swoole_tracker70.so /your_php_extensions_path/swoole_tracker.so  
+cp swoole_tracker70.so /your_php_extensions_path/swoole_tracker.so
 ```
 
 可在 `php.ini` 中加入以下配置
@@ -65,13 +65,13 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 
 ## 在Docker中部署
 
->[danger] 请注意修改相关路径为你自己的路径！！！以下的swoole.so只是演示说明可安装其他扩展，swoole_tracker不依赖swoole扩展
+>[danger] 请注意修改相关路径为你自己的路径！！！以下的swoole.so只是演示说明可安装其他扩展，swoole\_tracker不依赖swoole扩展
 
 在docker环境部署需要修改Dockerfile或者docker-compose.yml或者在`docker run`命令中添加参数，以下以采用官方docker-compose v3.7配置文件格式，php:fpm-7.x(-alpine)镜像为例，描述如何在docker部署
 
 ### 修改Dockerfile以部署node-agent
 
-在Dockerfile中执行deploy_env.sh来部署node-agent，然后在entrypoint中添加node-agent，例如
+在Dockerfile中执行deploy\_env.sh来部署node-agent，然后在entrypoint中添加node-agent，例如
 
 ```dockerfile
 # dockerfile的其他部分
@@ -90,9 +90,10 @@ RUN printf '#!/bin/sh\n/opt/swoole/script/php/swoole_php /opt/swoole/node-agent/
 # 启用entrypoint脚本（-x方便调试， 可以去掉）
 ENTRYPOINT [ "sh", "-x", "/opt/swoole/entrypoint.sh" ]
 ```
+
 ### 启用扩展
 
-对于官方镜像php:fpm系列，php(-fpm)默认读取/usr/local/etc/php/conf.d下的配置文件，默认的entrypoint会将"-"开头的参数作为fpm启动参数，因此可以采用以下方式启用swoole_tracker扩展
+对于官方镜像php:fpm系列，php(-fpm)默认读取/usr/local/etc/php/conf.d下的配置文件，默认的entrypoint会将"-"开头的参数作为fpm启动参数，因此可以采用以下方式启用swoole\_tracker扩展
 
 在Dockerfile添加配置文件：
 
@@ -126,9 +127,9 @@ docker run --other-arguments myphpfpm:1 -dextension=/path/to/swoole.so -dextensi
 
 参考https://docs.docker.com/engine/security/seccomp/
 
-对于权限配置，可以添加SYS_PTRACE cap，或者使用提升权限模式（不推荐）
+对于权限配置，可以添加SYS\_PTRACE cap，或者使用提升权限模式（不推荐）
 
-对于seccomp，可以修改seccomp配置，或关闭seccomp配置（不推荐，这将导致docker内程序可以执行create_module，kexec_load等危险系统调用）
+对于seccomp，可以修改seccomp配置，或关闭seccomp配置（不推荐，这将导致docker内程序可以执行create\_module，kexec\_load等危险系统调用）
 
 ### 修改seccomp配置
 
@@ -172,7 +173,7 @@ docker run --other-arguments myphpfpm:1 -dextension=/path/to/swoole.so -dextensi
                         "action": "SCMP_ACT_ALLOW",
 ```
 
-在docker run使用该seccomp并给予SYS_PTRACE权限：
+在docker run使用该seccomp并给予SYS\_PTRACE权限：
 
 ```bash
 docker run --other-arguments --cap-add=SYS_PTRACE --security-opt seccomp=/path/to/that/modified/profile.json ...
@@ -229,6 +230,6 @@ docker run \
  -v php:7.3-fpm
 ```
 
-## 管理NodeAgent进程
+## 管理客户端进程
 
-查看常见问题中的「 [管理NodeAgent守护进程](qa.md#4_NodeAgent_56) 」
+查看 [常见问题](qa.md) 中的「管理NodeAgent守护进程」
