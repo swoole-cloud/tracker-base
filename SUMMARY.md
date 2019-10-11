@@ -1,6 +1,7 @@
 * [安装客户端](client.md)
 * [上报数据](report.md)
 * [常见问题](qa.md)
+* [首页(应用列表)](home.md)
 * [应用监控](module.md)
 * [应用追踪](trace.md)
 * [调试器](debuger.md)
