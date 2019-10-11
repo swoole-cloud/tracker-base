@@ -68,13 +68,13 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 
 ## 在Docker中部署
 
->[danger] 请注意修改相关路径为你自己的路径！！！以下的swoole.so只是演示说明可安装其他扩展，swoole\_tracker不依赖swoole扩展
+>[danger] 请注意修改相关路径为你自己的路径！！！以下的swoole.so只是演示说明可安装其他扩展，swoole_tracker不依赖swoole扩展
 
 在docker环境部署需要修改Dockerfile或者docker-compose.yml或者在`docker run`命令中添加参数，以下以采用官方docker-compose v3.7配置文件格式，php:fpm-7.x(-alpine)镜像为例，描述如何在docker部署
 
 ### 修改Dockerfile以部署node-agent
 
-在Dockerfile中执行deploy\_env.sh来部署node-agent，然后在entrypoint中添加node-agent，例如
+在Dockerfile中执行deploy_env.sh来部署node-agent，然后在entrypoint中添加node-agent，例如
 
 ```dockerfile
 # dockerfile的其他部分
