@@ -45,14 +45,16 @@ cp swoole_tracker70.so /your_php_extensions_path/swoole_tracker.so
 
 在 `php.ini` 中加入以下配置
 
-```
+```ini
 extension=swoole_tracker.so
 apm.enable=1           #打开总开关
 apm.sampling_rate=100  #采样率 100%
     
-# 手动埋点时再添加
+#手动开启内存泄漏检测时再添加
 apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 ```
+>[danger] `enable`为 1 时表示应用监控百分百拦截并上报
+> `sampling_rate`采样率只作用于应用追踪，设置为 100 则表示每次请求都会生成一条 trace 数据
 
 ### 3. 卸载不兼容扩展
 
