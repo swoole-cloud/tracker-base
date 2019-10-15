@@ -9,4 +9,4 @@
 ## 请求类型汇总
 ![](images/screenshot_1571109315069.png)
 ## 实例调用关系拓扑图
-![实例调用关系拓扑图](images/screenshot_1571109443811.png)
+![](images/screenshot_1571109443811.png)
