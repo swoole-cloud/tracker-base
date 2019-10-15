@@ -2,9 +2,8 @@
 
 >[success] 上报成功后在后台查看，需要切换当前项目，默认在默认项目中。
 
+![](images/screenshot_1571109994028.png)
 >[danger] 可以先看应用追踪，首页和应用监控需要时间进行分析。
-
-![image.png](images/1563785868630-ef28ef9d-2d60-4356-ac35-a232c86a003c.png)
 
 ## php-fpm模式
 
