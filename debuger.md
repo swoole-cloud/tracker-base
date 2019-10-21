@@ -47,3 +47,6 @@
 
 `v2.7.1`版本中新增的功能『查看调用栈』，方便定位 PHP 卡死问题，包括但不限于`死循环`、`sesstion_start函数导致卡死`、`flock函数导致卡死`、`TCP超时时间为-1`、`swoole协程的lock`等
 ![](images/screenshot_1570758472752.png)
+
+增加了调用栈的页面，开启并且发生请求后就会上报
+![](images/screenshot_1571643093157.png)
