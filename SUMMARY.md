@@ -3,7 +3,7 @@
 * [名词解释](noun-interpretation.md)
 * [常见问题](qa.md)
 * [首页(应用列表)](home.md)
-* [应用监控](module.md)
+* [调用统计](module.md)
 * [应用追踪](trace.md)
 * [调试器](debuger.md)
 * [机器信息](sysinfo.md)
