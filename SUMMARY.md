@@ -2,7 +2,7 @@
 * [上报数据](report.md)
 * [名词解释](noun-interpretation.md)
 * [常见问题](qa.md)
-* [首页(应用列表)](home.md)
+* [首页](home.md)
 * [调用统计](module.md)
 * [链路追踪](trace.md)
 * [调试器](debuger.md)
