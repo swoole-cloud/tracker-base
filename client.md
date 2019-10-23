@@ -42,7 +42,7 @@
 ```
 cp swoole_tracker70.so /your_php_extensions_path/swoole_tracker.so
 ```
->[warning] 如果不会安装扩展，可使用我们的`安装扩展助手`进行安装
+>[danger] 如果扩展安装不上，可使用下载包中的`inst.sh`进行安装，实在不行联系客服
 
 在 `php.ini` 中加入以下配置
 
@@ -67,7 +67,7 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 
 重启swoole server或者php-fpm服务，发生请求后稍等片刻，等待服务端接收客户端发送的数据。
 
-## 在Docker中部署
+## 在Docker环境中部署客户端
 
 >[danger] 请注意修改相关路径为你自己的路径！！！以下的swoole.so只是演示说明可安装其他扩展，swoole_tracker不依赖swoole扩展
 
