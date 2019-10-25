@@ -1,5 +1,12 @@
 [TOC]
 
+## 订阅更新
+
+>[danger] 🎉强烈推荐关注！！！
+
+扫码关注公众号，会收到一条`您已经成功订阅「Swoole Tracker」`的信息，后期`Swoole Tracker`发布新版本时会推送模板消息，第一时间获取更新信息~
+<img src="images/screenshot_1571987169073.png" style="width:200px">
+
 ## 安装包
 
 在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请使用后，会看到如下信息
