@@ -7,7 +7,7 @@ https://www.swoole-cloud.com/
 一般的使用问题，你可以在我们完整的[用户手册](https://www.kancloud.cn/swoole-inc/ee-help-wiki/1213080)中找到答案。
 
 如果遇到疑难问题和使用故障，您可以联系客服微信咨询。
-![](images/6b0425fb0d89789b3eea4452c5b240c5_430x430.png)
+![](images/6b0425fb0d89789b3eea4452c5b240c5_430x430.png =200x200)
 
 ## Swoole Tracker交流群
 
@@ -18,4 +18,4 @@ https://www.swoole-cloud.com/
 ## 订阅更新
 
 扫码关注公众号，会收到一条`您已经成功订阅「Swoole Tracker」`的信息，后期`Swoole Tracker`发布新版本时会推送模板消息，第一时间获取更新信息~
-![](images/screenshot_1571987169073.png)
+![](images/screenshot_1571987169073.png =200x200)
