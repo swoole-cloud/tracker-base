@@ -18,6 +18,7 @@
 ![](images/watermark,type_d3F5LW1pY3JvaGVp,size_20,text_6K-G5rKD56eR5oqA54mI5p2D5omA5pyJ,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10-20190806145641396.png)
 
 ### 内存泄漏
+>[danger]  ⚠️此功能仅支持 PHP71+ 版本，即PHP71、PHP72、PHP73
 
 会获取到存在内存泄漏的文件堆栈信息，说明你需要在代码逻辑执行完毕后将该键名 `unset` 掉，就可以解决内存泄漏问题
 
