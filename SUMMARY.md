@@ -5,6 +5,7 @@
 * [首页](home.md)
 * [调用统计](module.md)
 * [链路追踪](trace.md)
+* [调试器适用场景](debug-explain.md)
 * [调试器](debuger.md)
 * [机器信息](sysinfo.md)
 * [联系我们](contact-us.md)
