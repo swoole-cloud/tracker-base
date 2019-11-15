@@ -101,7 +101,7 @@ RUN printf '#!/bin/sh\n/opt/swoole/script/php/swoole_php /opt/swoole/node-agent/
 # 启用entrypoint脚本（-x方便调试， 可以去掉）
 ENTRYPOINT [ "sh", "-x", "/opt/swoole/entrypoint.sh" ]
 ```
-
+>[danger] 如果不是私有化部署，而是Sass用户，请修改**服务端IP**为`www.swoole-cloud.com`
 ### 启用扩展
 
 对于官方镜像php:fpm系列，php(-fpm)默认读取/usr/local/etc/php/conf.d下的配置文件，默认的entrypoint会将"-"开头的参数作为fpm启动参数，因此可以采用以下方式启用swoole\_tracker扩展
