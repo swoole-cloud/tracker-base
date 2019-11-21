@@ -69,6 +69,7 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 1. xdebug
 2. ioncube loader
 3. zend guard loader
+4. xhprof
 
 ### 4. 重启服务
 
