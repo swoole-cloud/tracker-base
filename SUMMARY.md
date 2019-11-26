@@ -7,5 +7,6 @@
 * [链路追踪](trace.md)
 * [调试器适用场景](debug-explain.md)
 * [调试器](debuger.md)
+* [Agent列表](agent-list.md)
 * [机器信息](sysinfo.md)
 * [联系我们](contact-us.md)
