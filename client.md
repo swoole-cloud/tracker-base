@@ -43,7 +43,6 @@ chmod +x swoole-tracker-install.sh
 ```
 cp swoole_tracker70.so /your_php_extensions_path/swoole_tracker.so
 ```
->[danger] 如果扩展安装不上，可使用下载包中的`inst.sh`进行安装，实在不行联系客服
 
 在 `php.ini` 中加入以下配置
 
