@@ -14,22 +14,14 @@
 >[success] 安装或更新 步骤相同，更新需要点击重新申请；卸载直接卸载扩展，关闭客户端进程（可参见下文管理客户端进程）。
 
 ![](images/screenshot_1569568131325.png)
-点击下载客户端包，上传到测试机器后进行解压缩，得到如下目录
+点击客户端包后的**下载**，会得到一个名为`swoole-tracker-install.sh`的脚本，上传到测试机器后进行如下操作：
 
+```bash
+chmod +x swoole-tracker-install.sh
+
+./swoole-tracker-install.sh
 ```
-.
-├── README_CLIENT.md README文件
-├── app_deps # 客户端代码
-│   ├── node-agent
-│   └── public
-├── musl-compat
-├── deploy_env.sh # 部署脚本
-├── inst.sh # 安装扩展助手
-├── swoole_tracker70.so # 各版本扩展
-├── swoole_tracker71.so
-├── swoole_tracker72.so
-└── swoole_tracker73.so
-```
+执行后就会自动下载相关依赖包和执行`deploy_env.sh`脚本，**即执行后可忽略下文中的安装依赖步骤，进入下一步安装扩展**。
 
 ## 安装部署
 
@@ -85,29 +77,22 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 
 ### 修改Dockerfile以部署node-agent
 
-在Dockerfile中执行deploy_env.sh来部署node-agent，然后在entrypoint中添加node-agent，例如
+在Dockerfile中执行 `swoole-tracker-install.sh` 来部署node-agent，然后在entrypoint中添加node-agent，例如
 
 ```dockerfile
 # dockerfile的其他部分
 
 # 部署node-agent
-ADD swoole-tracker-vx.y.z.tar.gz /tmp/
-RUN tar -C / -xvf /tmp/swoole-tracker-vx.y.z.tar.gz && \
-    cd /swoole-tracker/node-agent && \
-    ./deploy_env.sh 服务端IP && \
-    rm /tmp/swoole-tracker-vx.y.z.tar.gz
-
-# 添加entrypoint脚本
-RUN printf '#!/bin/sh\n/opt/swoole/script/php/swoole_php /opt/swoole/node-agent/src/node.php &\nphp-fpm $@' > /opt/swoole/entrypoint.sh && \
-    chmod 755 /opt/swoole/entrypoint.sh
-
-# 启用entrypoint脚本（-x方便调试， 可以去掉）
-ENTRYPOINT [ "sh", "-x", "/opt/swoole/entrypoint.sh" ]
+ADD swoole-tracker-install.sh /tmp/
+RUN chmod +x /tmp/swoole-tracker-install.sh && \
+    cd /tmp/ && \
+    ./swoole-tracker-install.sh && \
+    rm /tmp/swoole-tracker-install.sh
 ```
->[danger] 如果不是私有化部署，而是Sass用户，请修改**服务端IP**为`www.swoole-cloud.com`
+
 ### 启用扩展
 
-对于官方镜像php:fpm系列，php(-fpm)默认读取/usr/local/etc/php/conf.d下的配置文件，默认的entrypoint会将"-"开头的参数作为fpm启动参数，因此可以采用以下方式启用swoole\_tracker扩展
+对于官方镜像php:fpm系列，php(-fpm)默认读取/usr/local/etc/php/conf.d下的配置文件，默认的entrypoint会将"-"开头的参数作为fpm启动参数，因此可以采用以下方式启用swoole_tracker扩展
 
 在Dockerfile添加配置文件：
 
@@ -141,9 +126,9 @@ docker run --other-arguments myphpfpm:1 -dextension=/path/to/swoole.so -dextensi
 
 参考https://docs.docker.com/engine/security/seccomp/
 
-对于权限配置，可以添加SYS\_PTRACE cap，或者使用提升权限模式（不推荐）
+对于权限配置，可以添加SYS_PTRACE cap，或者使用提升权限模式（不推荐）
 
-对于seccomp，可以修改seccomp配置，或关闭seccomp配置（不推荐，这将导致docker内程序可以执行create\_module，kexec\_load等危险系统调用）
+对于seccomp，可以修改seccomp配置，或关闭seccomp配置（不推荐，这将导致docker内程序可以执行create_module，kexec_load等危险系统调用）
 
 ### 修改seccomp配置
 
@@ -187,7 +172,7 @@ docker run --other-arguments myphpfpm:1 -dextension=/path/to/swoole.so -dextensi
                         "action": "SCMP_ACT_ALLOW",
 ```
 
-在docker run使用该seccomp并给予SYS\_PTRACE权限：
+在docker run使用该seccomp并给予SYS_PTRACE权限：
 
 ```bash
 docker run --other-arguments --cap-add=SYS_PTRACE --security-opt seccomp=/path/to/that/modified/profile.json ...
@@ -222,7 +207,8 @@ services:
 ```bash
 # 在host安装NodeAgent（或者手动安装/opt/swoole的文件）
 cd /some/place/swoole-tracker/node-agent
-./deploy_env.sh a.b.c.d
+./deploy_env.sh 服务端IP
+
 # 开启NodeAgent容器
 docker run \
  --name nodeagent \
