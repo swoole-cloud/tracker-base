@@ -1,5 +1,5 @@
 [TOC]
-## 安装包
+## 安装部署
 
 在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请使用后，会看到如下信息
 
@@ -14,20 +14,8 @@ chmod +x swoole-tracker-install.sh
 
 ./swoole-tracker-install.sh
 ```
-执行后就会自动下载相关依赖包和执行`deploy_env.sh`脚本，**即执行后可忽略下文中的安装依赖步骤，进入下一步安装扩展**。
 
-## 安装部署
-
-### 1. 安装依赖
-
-使用我们提供到脚本进行依赖安装，在命令行中执行：
-
-```bash
-./deploy_env.sh
-```
->[success] 正式版用户需要在此脚本后加上对应的服务端 IP。
-
-### 2. 安装扩展
+### 安装扩展
 
 根据你的机器PHP版本安装对应的扩展，复制对应的扩展到PHP环境扩展安装目录
 
@@ -51,14 +39,14 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 >[danger] `enable`为 1 时表示应用监控百分百拦截并上报
 > `sampling_rate`采样率只作用于应用追踪，设置为 100 则表示每次请求都会生成一条 trace 数据
 
-### 3. 卸载不兼容扩展
+### 卸载不兼容扩展
 
 1. xdebug
 2. ioncube loader
 3. zend guard loader
 4. xhprof
 
-### 4. 重启服务
+### 重启服务
 
 重启swoole server或者php-fpm服务，发生请求后稍等片刻，等待服务端接收客户端发送的数据。
 
