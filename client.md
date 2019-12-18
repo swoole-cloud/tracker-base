@@ -1,11 +1,14 @@
 [TOC]
 ## 安装部署
 
+### 第一步：后台申请
 在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请使用后，会看到如下信息
 
 >[success] 安装或更新 步骤相同，更新需要点击重新申请；卸载直接卸载扩展，关闭客户端进程（可参见下文管理客户端进程）。
 
 ![](images/screenshot_1569568131325.png)
+
+### 第二步：安装Agent进程
 点击客户端包后的**下载**，会得到一个名为`swoole-tracker-install.sh`的脚本，上传到测试机器后进行如下操作：
 >[danger] 如果使用 wget 下载，文件名为注册的手机号，操作和下文相同
 
@@ -15,7 +18,7 @@ chmod +x swoole-tracker-install.sh
 ./swoole-tracker-install.sh
 ```
 
-### 安装扩展
+### 第三步：安装扩展
 
 根据你的机器PHP版本安装对应的扩展，复制对应的扩展到PHP环境扩展安装目录
 
@@ -39,14 +42,14 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 >[danger] `enable`为 1 时表示应用监控百分百拦截并上报
 > `sampling_rate`采样率只作用于应用追踪，设置为 100 则表示每次请求都会生成一条 trace 数据
 
-### 卸载不兼容扩展
+#### 卸载不兼容扩展
 
 1. xdebug
 2. ioncube loader
 3. zend guard loader
 4. xhprof
 
-### 重启服务
+### 第四步：重启PHP服务
 
 重启swoole server或者php-fpm服务，发生请求后稍等片刻，等待服务端接收客户端发送的数据。
 
