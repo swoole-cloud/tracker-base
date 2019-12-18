@@ -15,6 +15,7 @@
 
 ![](images/screenshot_1569568131325.png)
 点击客户端包后的**下载**，会得到一个名为`swoole-tracker-install.sh`的脚本，上传到测试机器后进行如下操作：
+>[danger] 如果使用 wget 下载，文件名为注册的手机号，操作和下文相同
 
 ```bash
 chmod +x swoole-tracker-install.sh
