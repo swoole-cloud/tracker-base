@@ -17,7 +17,7 @@ chmod +x swoole-tracker-install.sh
 
 ./swoole-tracker-install.sh
 ```
-
+执行完成后，会在当前目录下生成存放so扩展文件的`swoole_trackers`文件夹
 ### 第三步：安装扩展
 
 根据你的机器PHP版本安装对应的扩展，复制对应的扩展到PHP环境扩展安装目录
