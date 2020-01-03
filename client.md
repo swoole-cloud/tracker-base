@@ -24,7 +24,6 @@ chmod +x swoole-tracker-install.sh
 ├── deploy_env.sh
 ├── inst.sh
 ├── musl-compat
-├── README_CLIENT.md
 ├── swoole_tracker70.so #对应各版本扩展
 ├── swoole_tracker71.so
 ├── swoole_tracker72.so
