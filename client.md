@@ -1,6 +1,7 @@
+>[danger] Swoole Tracker 目前仅支持 Linux 系统，不支持Unix、Windows、Mac OS；支持 PHP5.4、5.5、5.6、7.0、7.1、7.2、7.3。
+
 [TOC]
 ## 安装部署
-
 ### 第一步：后台申请
 在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请使用后，会看到如下信息
 
