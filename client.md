@@ -10,7 +10,7 @@
 ![](images/screenshot_1569568131325.png)
 
 ### 第二步：安装Agent进程
-点击客户端包后的**下载**，会得到一个名为`swoole-tracker-install.sh`的脚本，上传到测试机器后进行如下操作：
+点击客户端包后的**下载**，会得到一个名为`swoole-tracker-install.sh`的脚本，上传到机器后进行如下操作：
 >[danger] 如果使用 wget 下载，文件名为注册的手机号，操作和下文相同
 
 ```bash
@@ -68,6 +68,8 @@ apm.enable_memcheck=1  #开启内存泄漏检测 默认0 关闭
 ### 第四步：重启PHP服务
 
 安装完成后，需要**重启对应的 SwooleServer 或者 php-fpm 服务**，发生请求后稍等片刻，等待服务端接收客户端发送的数据。
+
+>[success] 以上操作会在宿主机直接安装，如果你需要在Docker中部署，请看下文
 
 ## 在Docker环境中部署客户端
 
