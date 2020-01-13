@@ -202,36 +202,6 @@ services:
 
 与修改配置类似，但不需要创建json，将 `seccomp=/path/to/that/modified/profile.json`换成`seccomp=unconfined`即可
 
-### 单独的NodeAgent容器（高级用法）
-
-此处提供一种单独运行的方法，仅供参考：
-
-```bash
-# 在host安装NodeAgent（或者手动安装/opt/swoole的文件）
-cd /some/place/swoole-tracker/node-agent
-./deploy_env.sh 服务端IP
-
-# 开启NodeAgent容器
-docker run \
- --name nodeagent \
- -d --cap-add SYS_PTRACE \
- --security-opt seccomp=unconfined \
- --entrypoint /opt/swoole/script/php/swoole_php \
- -v /tmp:/tmp:rw \
- -v /opt/swoole:/opt/swoole:rw \
- alpine:edge \
- /opt/swoole/node-agent/src/node.php
-# 开启cgi容器
-docker run \
- --name cgi1 \
- -d \
- --pid="container:nodeagent" \
- --net="container:nodeagent" \
- -v /tmp:/tmp:rw \
- -v /opt/swoole:/opt/swoole:rw \
- -v php:7.3-fpm
-```
-
 ## 管理客户端进程
 
 查看 [常见问题](qa.md) 中的「管理NodeAgent守护进程」
