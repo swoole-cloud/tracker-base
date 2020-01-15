@@ -90,6 +90,13 @@ RUN chmod +x /tmp/swoole-tracker-install.sh && \
     cd /tmp/ && \
     ./swoole-tracker-install.sh && \
     rm /tmp/swoole-tracker-install.sh
+
+# 添加entrypoint脚本
+RUN printf '#!/bin/sh\n/opt/swoole/script/php/swoole_php /opt/swoole/node-agent/src/node.php &\nphp-fpm $@' > /opt/swoole/entrypoint.sh && \
+    chmod 755 /opt/swoole/entrypoint.sh
+
+# 启用entrypoint脚本（-x方便调试， 可以去掉）
+ENTRYPOINT [ "sh", "-x", "/opt/swoole/entrypoint.sh" ]
 ```
 
 ### 启用扩展
