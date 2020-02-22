@@ -1,4 +1,4 @@
->[danger] Swoole Tracker 目前仅支持 Linux 系统，不支持Unix、Windows、Mac OS；支持 PHP5.4、5.5、5.6、7.0、7.1、7.2、7.3。
+>[danger] Swoole Tracker 目前仅支持 Linux 系统，不支持Unix、Windows、Mac OS；不支持ARM架构；支持 PHP5.4、5.5、5.6、7.0、7.1、7.2、7.3。
 
 [TOC]
 ## 安装部署
