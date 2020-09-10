@@ -49,7 +49,7 @@ cp swoole_tracker70.so /your_php_extensions_path/swoole_tracker.so
 在 `php.ini` 中加入以下配置
 
 ```ini
-extension=/opt/.build/swoole_tracker.so
+extension=swoole_tracker.so
 
 ;打开总开关
 apm.enable=1
