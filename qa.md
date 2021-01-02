@@ -111,3 +111,7 @@ systemctl restart node-agent
 ## 11. 客户端运行报错 sw_get_entrypoint()：ERROR：mkdir error, make sure that start the agent first (Premission denied).
 
 请使用 root 用户启动 Agent服务，没有启动 Agent 服务并且不是使用 root 用户启动时会报这个错误
+
+## 12. 报错：PHP Startup: apm.enable and apm.enable_malloc_hook can't be turned on together, reset apm.enable=0
+
+开启了`apm.enable_malloc_hook =1`之后其他的功能均不可用，只能进行内存泄漏检测。
