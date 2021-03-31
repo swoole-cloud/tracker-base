@@ -9,8 +9,3 @@ https://www.swoole-cloud.com/
 如果遇到疑难问题和使用故障，您可以联系客服微信咨询。
 ![](images/6b0425fb0d89789b3eea4452c5b240c5_430x430.png =200x200)
 
-## Swoole Tracker交流群
-
-由于微信二维码只有 7 天有效期，这里需要大家先添加客服微信，然后由客服邀请进群。
-
-添加客服微信时，请说明加入 SwooleTracker 交流群。
