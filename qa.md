@@ -100,8 +100,7 @@ systemctl restart node-agent
 3. pid文件对应的进程是否正常
 
 ## 9. 加载扩展后报错
-[链接](扩展安装问题.md)
-
+[扩展安装问题](扩展安装问题.md)
 
 ## 11. 客户端运行报错 sw_get_entrypoint()：ERROR：mkdir error, make sure that start the agent first (Premission denied).
 
