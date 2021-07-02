@@ -3,7 +3,7 @@
 [TOC]
 ## 安装部署
 ### 第一步：后台申请
-在[官网](https://www.swoole-cloud.com/dashboard/catdemo)申请使用后，会看到如下信息
+在[官网](https://business.swoole.com/SwooleTracker/catdemo)申请使用后，会看到如下信息
 
 >[success] 安装或更新 步骤相同，更新需要点击重新申请；卸载直接卸载扩展，关闭客户端进程（可参见下文管理客户端进程）。
 
